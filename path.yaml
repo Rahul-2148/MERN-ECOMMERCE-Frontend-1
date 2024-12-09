@@ -1,0 +1,45 @@
+eg: p=p+1 is also written as p+=1
+
+eg: err.message = err.message || ""; is also written as err.message ||= "";
+
+
+
+bsquery
+
+# ./src/redux in frontend 
+🔴 redux : 1. api folder - isme hmlog api fetch krne ke liye rtk query use kiye hain, agar hmlog chahte toh axios 
+              se bhi api fetch kr skte the but hmlog kahin kahin rtk query use kiye h aur kahin kahin axios use kiye hain, toh wo depends upon uses
+
+            2. reducer folder - isme hmlog state management ke liye ye folder banaye hai jo redux ke help se hota
+               hai.like eg: cart manage ke liye redux ke help se banate hai.
+
+            3. store folder - isme hmlog store banaye hai.
+
+            4. action folder - isme hmlog action bana skte hai jo redux se bhi use karega.
+
+
+
+
+🔴 Best Loader file to use this on any project - 
+
+const Loader = () => {
+  return (
+    <div className="flex items-center justify-center h-screen bg-gray-50">
+      {/* Loader Container */}
+      <div className="flex items-center justify-center space-x-4">
+        {/* Circle 1 */}
+        <div className="w-4 h-4 bg-blue-500 rounded-full animate-bounce"></div>
+        {/* Circle 2 */}
+        <div className="w-4 h-4 bg-green-500 rounded-full animate-bounce delay-200"></div>
+        {/* Circle 3 */}
+        <div className="w-4 h-4 bg-red-500 rounded-full animate-bounce delay-400"></div>
+      </div>
+    </div>
+  );
+};
+export default Loader;
+   
+
+
+@  const img =
+  "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvZXN8ZW58MHx8MHx8&w=1000&q=804";

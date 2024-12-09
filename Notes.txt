@@ -1,0 +1,111 @@
+Ecommerce 
+
+🔴 for backend - node, Express.js, Mongodb
+
+🔴 for frontend - Here use typescript in place of javascript ( Typescript is a superset of javascript and it is a compiled language developed by Microsoft, ( actually Typescript is a statically typed language that compiles to plain JavaScript by this command in vs code terminal : tsc <file_name> ), while JavaScript is a interpreted language )
+
+for styling - Here used SaSS in place of CSS
+
+state management or cart ke liye - Redux toolkit
+
+For fetching - we will use RTK query
+
+For payment gateway - we will use stripe
+
+chote mote chij ke liye used - React-table for table create with sorting and pagination
+
+Authentication ke liye - Firebase
+
+
+🔴 frontend packages - npm i react-hot-toast react-icons sass firebase react-router-dom react-table chart.js react-chartjs-2 axios
+
+🔴 backend packages - npm i express mongoose dotenv nodemon cors
+
+frontend ke package.json ke devDependencies me ye install hua h : ye command -->  npm i --save-dev @types/react-table
+
+
+* css ka alternative SaSS &  javascript ka alternative typescript 
+
+* react-bootstrap ya tailwind avi use nhi hua h is project me 
+
+* vite React app banane me use kiye h , React and TypeScript + SWC
+
+
+# Suspense , me wrap krne se ye mtlb hai ki suspense me fallback hota h ki jb tk file load na ho tb tk kuch aur eg, loader dikhana hai. (frontend me App.tsx me hamne Routes ko Suspense se wrap kr diya hai),
+
+
+🔴 regex : iska matlab ye hai ki ye same type or keyword ka pattern dhoondhne ke liye use hota h , jo search me use kiya hu mai 
+# $options: "i" iska matlab hmne sensitive kr diya
+
+🔴 redish - ye ek alag hi database hai alag jo memory ram me store hota h fast banata h 
+node-cache - ye ek node inbuilt package hai isse me fast hota h and isse bhi database memory ram me store hota h
+
+🔴 morgan - It is a middleware for Node.js and Express that logs HTTP requests and errors in vs code terminal.
+
+🔴 rm - In a MERN stack application, the rm function is typically used to remove or delete files from the server's filesystem, like photos or other uploaded files. it's being used to delete the old photo associated with the product. It is used in Node.js's built-in fs module or a third-party library like multer.
+
+🔴 What is distinct in JavaScript?
+Getting distinct values from an array of objects in JavaScript involves extracting unique values from a specific property across all objects. This process eliminates duplicates, providing a clean and concise representation of the unique values present within the array. eg: Product.distinct("category")
+
+🔴 What is reduce() in JavaScript?
+JavaScript Array Reduce(): Explained With Syntax and Examples ...
+The array reduce in JavaScript is a predefined method used to reduce an array to a single value by passing a callback function on each element of the array. It accepts a function executed on all the items of the specified array in the left-to-right sequence. The returned single value is stored in the accumulator. eg: const grossIncome = allOrders.reduce((prev, order) => prev + (order.total || 0), 0);
+
+
+🔴 # Important shortcuts :
+1. unused file ko hatane ke liye - shift + Alt + o 
+2. line duplicate krne ke liye - shift + Alt + pgDn (down arrow key)
+
+
+
+
+
+something :
+"start" : "node dist/server.js";
+"build" : "tsc";
+"watch" : "tsc -w";
+
+watch command --> iska use ye hai ki mtlb baar baar tsc command nhi krna padega js me change krne ke liye , auto change hota rahega jaise jaise agar file me changes honge toh , sbse jyada useful best h 
+
+
+
+
+
+
+ * Note: agar ek terminal bachana hai aur 2 terminal ki bajay ek se hi watch aur nodemon use krna hai to ye code 🤏
+ "start": "concurrently \"tsc -w\" \"nodemon dist/server.js\"",
+ isme, npm start dena hoge sirf command -->
+
+
+ * agar do terminal me split krke chalana hai alag alag to ye code 🤏
+ "scripts": {
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "dev": "nodemon dist/server.js"
+  },
+  isme, npm run watch and npm run dev , dena hoga command -->
+
+
+🔴# Production increate Percentage nikalne ke liye : assume is mahine 8 product create hua h and last month 2 product create hua tha toh uska total percentage kitna hoga - 
+
+🔸Formula of relative change means difference of prev month and current month : ((thisMonth - lastMonth) /   lastMonth) * 100;  , so here eg: (8-2)/2*100 = 300% production increased compared to last month 
+
+🔸Formula of absolute change means both included : (thisMonth / lastMonth) * 100; , so here eg: (8/2) * 100 = 400% production increased compared to last month , Note that I used Absolute Percent in my feature file to calculate percentage of last month and this month
+
+
+
+
+
+# ./redux/store - redux/toolkit - // middleware: (mid) => [...mid(), userAPI.middleware], ye redux toolkit ke purane version me use ho skta tha but ab naye version me nhi ho skta strict rule ho gya h ab , isliye ab aesa likhna hota h  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(userAPI.middleware),
+
+
+🔴 RTK Query : mutation and query me difference in rtk query
+
+In RTK Query, a mutation and a query are two types of APIs that you can define to interact with your backend.
+
+A query in RTK Query is used to fetch data from the server. It's similar to a GET request in REST APIs. When you define a query, you specify the endpoint URL, the method (usually GET), and the parameters that will be sent with the request.
+
+A mutation in RTK Query is used to send data to the server to create, update, or delete resources. It's similar to a POST, PUT, or DELETE request in REST APIs. When you define a mutation, you specify the endpoint URL, the method (usually POST, PUT, or DELETE), and the data that will be sent with the request.
+
+
